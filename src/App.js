@@ -5,7 +5,7 @@ import Squad from './components/Squad/Squad';
 import TextInput from './components/TextInput/TextInput';
 
 function App() {
-  const times= [
+  const squads= [
     {
       name: 'Programação',
       secondaryColor: '#D9F7E9',
@@ -46,9 +46,9 @@ function App() {
   return (
     <div className="App">
       <Banner/>
-      <Form employees={employees} setEmployees={setEmployees}/>
-      {times.map(time=>(
-          <Squad key={time.name} name={time.name} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor}/>
+      <Form employees={employees} setEmployees={setEmployees} squads={squads.map((squad)=>squad.name)}/>
+      {squads.map(squad=>(
+          <Squad key={squad.name} name={squad.name} primaryColor={squad.primaryColor} secondaryColor={squad.secondaryColor}/>
         ))}
     </div>
   );
