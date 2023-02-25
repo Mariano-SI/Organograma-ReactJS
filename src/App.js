@@ -48,7 +48,13 @@ function App() {
       <Banner/>
       <Form employees={employees} setEmployees={setEmployees} squads={squads.map((squad)=>squad.name)}/>
       {squads.map(squad=>(
-          <Squad key={squad.name} name={squad.name} primaryColor={squad.primaryColor} secondaryColor={squad.secondaryColor}/>
+          <Squad 
+            key={squad.name} 
+            name={squad.name} 
+            primaryColor={squad.primaryColor} 
+            secondaryColor={squad.secondaryColor}
+            employees={employees}
+          />
         ))}
     </div>
   );
