@@ -20,7 +20,6 @@ const Form = (props) => {
       setRole('')
       setImage('')
       setSquad('')
-      console.log(props.employees)
   }
 
   return (

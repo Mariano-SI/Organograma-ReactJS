@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Banner from './components/Banner/Banner';
+import Footer from './components/Footer/Footer';
 import Form from './components/Form/Form';
 import Squad from './components/Squad/Squad';
-import TextInput from './components/TextInput/TextInput';
+
 
 function App() {
   const squads= [
@@ -40,7 +41,7 @@ function App() {
       name: 'Inovação e Gestão',
       secondaryColor: '#FFEEDF',
       primaryColor: '#FF8A29'
-    },
+    }
   ]
   const [employees, setEmployees] = useState([])
   return (
@@ -53,9 +54,10 @@ function App() {
             name={squad.name} 
             primaryColor={squad.primaryColor} 
             secondaryColor={squad.secondaryColor}
-            employees={employees}
+            employees={employees.filter((employee)=> employee.squad === squad.name)}
           />
         ))}
+      <Footer/>
     </div>
   );
 }

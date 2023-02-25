@@ -6,6 +6,7 @@ const Select = (props) => {
     <div className='listaSuspensa'>
       <label >{props.label}</label>
       <select onChange={ e =>props.setValue(e.target.value)} value={props.value}>
+      <option value={''}></option>
         {props.itens.map((item)=>(
           <option key={item}>{item}</option>
         ))}

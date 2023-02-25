@@ -1,15 +1,16 @@
 import React from 'react'
 import "./EmployeeCard.css"
+const EmployeeCard = ({name,role,image,headerColor}) => {
 
-const EmployeeCard = (props) => {
+  console.log()
   return (
     <div className='employee'>
-      <div className='header'>
-        <img src="https://github.com/Mariano-SI.png" alt="Mariano" />
+      <div className='header' style={{backgroundColor:`${headerColor}`}}>
+        <img src={image? image: "/images/perfil.png"} alt={`${name}`} />
       </div>
       <div className='footer'>
-        <h4>Mariano</h4>
-        <h5>FullStack Developer</h5>
+        <h4>{name}</h4>
+        <h5>{role}</h5>
       </div>
     </div>
   )

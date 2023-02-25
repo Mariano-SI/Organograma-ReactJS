@@ -9,3 +9,10 @@
     padding-bottom: 8px;
     display: inline-block;
 }
+.squad .employeesContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+
+}

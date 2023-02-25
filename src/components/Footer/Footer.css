@@ -1,0 +1,27 @@
+.footerContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 64px;
+    background-color: #6278F7;
+}
+.footerContainer div ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-inline-start: 0;
+}
+.footerContainer div ul li{
+    padding-right: 10px;
+}
+
+.footerContainer div h5{
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footerContainer div h5 a{
+    text-decoration: none;
+    color: #fff;
+}
